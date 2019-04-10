@@ -1,0 +1,251 @@
+Country,Airport_Code
+Albania,TIA
+Armenia,EVN
+Austria,GRZ
+Austria,INN
+Austria,KLU
+Austria,LNZ
+Austria,SZG
+Austria,VIE
+Azerbaijan,GYD
+Belarus,MSQ
+Belgium,ANR
+Belgium,BRU
+Belgium,CRL
+Belgium,LGG
+Belgium,OST
+Bosnia and Herzegovina,SJJ
+Bosnia and Herzegovina,TZL
+Bulgaria,BOJ
+Bulgaria,SOF
+Bulgaria,VAR
+Croatia,DBV
+Croatia,PUY
+Croatia,SPU
+Croatia,ZAD
+Croatia,ZAG
+Cyprus,LCA
+Cyprus,PFO
+Czech Republic,BRQ
+Czech Republic,PRG
+Denmark,AAL
+Denmark,AAR
+Denmark,BLL
+Denmark,CPH
+Estonia,TLL
+Finland,HEL
+Finland,OUL
+Finland,RVN
+Finland,TMP
+Finland,TKU
+Finland,VAA
+France,AJA
+France,"BSL, MLH, EAP"
+France,BIA
+France,EGC
+France,BIQ
+France,BOD
+France,BES
+France,FSC
+France,LIL
+France,LYS
+France,MRS
+France,MPL
+France,NTE
+France,NCE
+France,BVA
+France,CDG
+France,ORY
+France,SXB
+France,TLN
+France,TLS
+Georgia,TBS
+Germany,FMM
+Germany,BER
+Germany,SXF
+Germany,TXL
+Germany,BRE
+Germany,CGN
+Germany,DTM
+Germany,DRS
+Germany,DUS
+Germany,FRA
+Germany,FDH
+Germany,HHN
+Germany,HAM
+Germany,HAJ
+Germany,FKB
+Germany,LEJ
+Germany,MUC
+Germany,FMO
+Germany,NUE
+Germany,PAD
+Germany,STR
+Germany,NRN
+Greece,ATH
+Greece,CHQ
+Greece,CFU
+Greece,HER
+Greece,KGS
+Greece,JMK
+Greece,RHO
+Greece,JTR
+Greece,SKG
+Greece,ZTH
+Hungary,BUD
+Hungary,DEB
+Iceland,KEF
+Ireland,ORK
+Ireland,DUB
+Ireland,NOC
+Ireland,KIR
+Ireland,SNN
+Italy,AHO
+Italy,AOI
+Italy,BRI
+Italy,BGY
+Italy,BLQ
+Italy,BDS
+Italy,CAG
+Italy,CTA
+Italy,CIY
+Italy,FLR
+Italy,GOA
+Italy,SUF
+Italy,LIN
+Italy,MXP
+Italy,NAP
+Italy,OLB
+Italy,PMO
+Italy,PEG
+Italy,PSR
+Italy,PSA
+Italy,CIA
+Italy,FCO
+Italy,TPS
+Italy,TSF
+Italy,TRN
+Italy,VCE
+Italy,VRN
+Kazakhstan,ALA
+Kazakhstan,TSE
+Latvia,RIX
+Lithuania,KUN
+Lithuania,VNO
+Luxembourg,LUX
+Macedonia,SKP
+Malta,MLA
+Moldova,KIV
+Montenegro,TGD
+Montenegro,TIV
+Netherlands,AMS
+Netherlands,EIN
+Netherlands,GRQ
+Netherlands,MST
+Netherlands,RTM
+Norway,AES
+Norway,BGO
+Norway,BOO
+Norway,HAU
+Norway,KRS
+Norway,OSL
+Norway,TRF
+Norway,SVG
+Norway,TOS
+Norway,TRD
+Poland,GDN
+Poland,KTW
+Poland,KRK
+Poland,WMI
+Poland,POZ
+Poland,WAW
+Poland,WRO
+Portugal,FAO
+Portugal,LIS
+Portugal,FNC
+Portugal,PDL
+Portugal,OPO
+Romania,OTP
+Romania,CLJ
+Romania,IAS
+Romania,TSR
+Russia,SVX
+Russia,DME
+Russia,SVO
+Russia,VKO
+Russia,LED
+Russia,AER
+Serbia,BEG
+Serbia,INI
+Serbia,PRN
+Slovakia,BTS
+Slovenia,LJU
+Spain,ALC
+Spain,LEI
+Spain,BCN
+Spain,BIO
+Spain,FUE
+Spain,GRO
+Spain,LPA
+Spain,IBZ
+Spain,XRY
+Spain,ACE
+Spain,MAD
+Spain,AGP
+Spain,PMI
+Spain,MAH
+Spain,MJV
+Spain,REU
+Spain,SDR
+Spain,SCQ
+Spain,SVQ
+Spain,TFN
+Spain,TFS
+Spain,VLC
+Spain,ZAZ
+Sweden,GOT
+Sweden,MMX
+Sweden,ARN
+Sweden,BMA
+Sweden,NYO
+Sweden,VST
+Switzerland,BRN
+Switzerland,GVA
+Switzerland,LUG
+Switzerland,ZRH
+Turkey,ADA
+Turkey,ESB
+Turkey,AYT
+Turkey,DLM
+Turkey,IST
+Turkey,ISL
+Turkey,SAW
+Turkey,ADB
+Turkey,BJV
+Turkey,TZX
+Ukraine,KBP
+Ukraine,IEV
+Ukraine,ODS
+United Kingdom,ABZ
+United Kingdom,BHD
+United Kingdom,BFS
+United Kingdom,BHX
+United Kingdom,BRS
+United Kingdom,CWL
+United Kingdom,EMA
+United Kingdom,EDI
+United Kingdom,GLA
+United Kingdom,PIK
+United Kingdom,HUY
+United Kingdom,JER
+United Kingdom,LBA
+United Kingdom,LPL
+United Kingdom,LCY
+United Kingdom,LGW
+United Kingdom,LHR
+United Kingdom,LTN
+United Kingdom,SEN
+United Kingdom,STN
+United Kingdom,MAN
+United Kingdom,SOU
+United Kingdom,NCL
