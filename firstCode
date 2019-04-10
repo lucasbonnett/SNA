@@ -1,0 +1,30 @@
+install.packages("statnet")
+library(statnet)
+install.packages("coda")
+library("coda")
+library(igraph)
+
+
+data <- read.csv("C:/Users/lbonnett/Desktop/SNA Group/Social Network Analysis.csv", header=TRUE, sep = ",")
+airport_codes <- read.csv("C:/Users/lbonnett/Desktop/SNA Group/Airport_Code.csv", header=TRUE, sep = ",")
+
+data$codeshare <- NULL
+data$source.airport.id <- NULL
+data$destination.airport.id <- NULL
+data$airline.ID <- NULL
+data$equipment <- NULL
+
+data$bol <- ifelse(any(data$source.airport %in% airport_codes$Airport_Code) & any(data$source.airport %in% airport_codes$Airport_Code), T, F)
+
+#add columns with city and country per airport code
+
+
+set.seed(1)
+
+my_network2 <- graph.data.frame(data[,2:3], directed = TRUE)
+plot(my_network2)
+
+#subset
+my_network3 <- graph.data.frame(data[1:50,2:3], directed = TRUE)
+plot(my_network3)  
+  
