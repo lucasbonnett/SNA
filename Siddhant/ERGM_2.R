@@ -75,6 +75,7 @@ my_network2 <- graph.data.frame(flights_base_sub[,1:2], directed = F)
 my_adj <- get.adjacency(my_network2)
 
 flights_mat <- as.matrix(my_adj)
+flights_mat[flights_mat == 2] <- 1
 flights_mat[1:6,1:6]
 detach("package:igraph")
 
@@ -97,6 +98,7 @@ my_network <- graph.data.frame(flights_base[,1:2], directed = F)
 my_adj <- get.adjacency(my_network)
 
 flights_mat <- as.matrix(my_adj)
+flights_mat[flights_mat == 2] <- 1
 flights_mat[1:6,1:6]
 detach("package:igraph")
 
@@ -107,23 +109,35 @@ my_network <- network(flights_mat, vertex.attr=country_sub, vertex.attrnames=
                         colnames(country_sub), hyper=F, loops=F, multiple=F, 
                       bipartite=F, directed = F)
 
-my_ergm_01 <- ergm(my_network ~ edges) 
+my_ergm_01 <- ergm(my_network ~ edges, estimate = "MPLE") 
 my_ergm_01
 summary(my_ergm_01)
 
 
-my_ergm_02 <- ergm(my_network ~ edges + triangle)
+my_ergm_02 <- ergm(my_network ~ edges + triangle, estimate = "MPLE")
 my_ergm_02
 summary(my_ergm_02)
 
 
-my_ergm_03 <- ergm(my_network ~ edges + nodematch("region")) 
+my_ergm_03 <- ergm(my_network ~ edges + nodematch("region"), estimate = "MPLE") 
 my_ergm_03
 summary(my_ergm_03)
 
 
-my_ergm_04 <- ergm(my_network ~ edges + nodematch("region") + degree(1)) 
+my_ergm_04 <- ergm(my_network ~ edges + nodematch("region") + degree(1), estimate = "MPLE") 
 my_ergm_04
 summary(my_ergm_04)
-mcmc.diagnostics(my_ergm_04)
+
+
+my_ergm_05 <- ergm(my_network ~ edges + nodematch("region") + degree(1), estimate = "MPLE",
+                   control=control.ergm(MCMC.burnin=50000, MCMC.interval=5000))
+my_ergm_05
+summary(my_ergm_05)
+
+
+my_ergm_06 <- ergm(my_network ~ edges + triangle  + nodematch("region") + degree(1), estimate = "MPLE",
+                   control=control.ergm(MCMC.burnin=50000, MCMC.interval=5000))
+my_ergm_06
+summary(my_ergm_06)
+
 
