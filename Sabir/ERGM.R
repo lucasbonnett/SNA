@@ -84,3 +84,42 @@ my_network <- network(flights_mat, vertex.attr=country, vertex.attrnames=colname
 plot(my_network, vertex.col=get.vertex.attribute(my_network, "region"),
      label=get.vertex.attribute(my_network, "name"), label.cex=0.8)
 
+
+#########################
+
+library(igraph)
+flights_base <- subset(flights_base, flights_base$airlines > 8)
+my_network <- graph.data.frame(flights_base[,1:2], directed = F)
+my_adj <- get.adjacency(my_network)
+
+flights_mat <- as.matrix(my_adj)
+flights_mat[1:6,1:6]
+detach("package:igraph")
+
+imp_countries <- c(flights_base$Source_Country,flights_base$Destination_Country)
+country_sub <- subset(country, country$name %in% imp_countries)
+
+my_network <- network(flights_mat, vertex.attr=country_sub, vertex.attrnames=
+                        colnames(country_sub), hyper=F, loops=F, multiple=F, 
+                      bipartite=F, directed = F)
+library(ergm)
+my_ergm_01 <- ergm(my_network ~ edges) 
+my_ergm_01
+summary(my_ergm_01)
+
+
+my_ergm_02 <- ergm(my_network ~ edges + triangle,estimate = "MPLE")
+my_ergm_02
+summary(my_ergm_02)
+
+
+my_ergm_03 <- ergm(my_network ~ edges + nodematch("region")) 
+my_ergm_03
+summary(my_ergm_03)
+
+
+my_ergm_04 <- ergm(my_network ~ edges + nodematch("region") + degree(1)) 
+my_ergm_04
+
+summary(my_ergm_04)
+mcmc.diagnostics(my_ergm_04)
