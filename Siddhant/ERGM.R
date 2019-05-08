@@ -1,6 +1,6 @@
-# install.packages("statnet")
+install.packages("statnet")
 library(statnet)
-# install.packages("coda")
+install.packages("coda")
 library(coda)
 library(igraph)
 
