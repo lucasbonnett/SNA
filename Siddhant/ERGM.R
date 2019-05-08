@@ -1,4 +1,4 @@
-# install.packages("statnet")
+install.packages("statnet")
 library(statnet)
 # install.packages("coda")
 library(coda)
