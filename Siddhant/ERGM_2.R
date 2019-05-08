@@ -14,7 +14,7 @@ country <- read_delim("Country.csv", ";",
 flights <- read.csv("Social Network Analysis.csv", header=TRUE, sep = ",", stringsAsFactors = F)
 
 airport_codes <- read_excel("airport-codes.xls", sheet = "Airport_Codes")
-
+country$X5=NULL
 
 flights$codeshare <- NULL
 flights$source.airport.id <- NULL
@@ -112,7 +112,7 @@ my_ergm_01
 summary(my_ergm_01)
 
 
-my_ergm_02 <- ergm(my_network ~ edges + triangle)
+my_ergm_02 <- ergm(my_network ~ edges + triangle, estimate='MPLE')
 my_ergm_02
 summary(my_ergm_02)
 
@@ -127,3 +127,8 @@ my_ergm_04
 summary(my_ergm_04)
 mcmc.diagnostics(my_ergm_04)
 
+my_network_1 <- network(flights_mat, vertex.attr=country_sub, vertex.attrnames=
+                        colnames(country_sub), hyper=F, loops=F, multiple=F, 
+                      bipartite=F, directed = T)
+
+my_ergm_05 <- ergm(my_network ~ edges + concurrent)
