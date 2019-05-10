@@ -312,8 +312,10 @@ summary(ergmedge)
 
 
 # ERGM without attributes
-ergmstructuralonly <- ergm(my_network ~ edges + triangle + degree(1:10) + kstar(2:10), estimate='MPLE',
-                           control=control.ergm(MCMC.burnin=50000, MCMC.interval=5000))
+ergmstructuralonly <- ergm(my_network ~ edges + triangle 
+                           + degree(1:10) + kstar(2:10)
+                           , estimate='MPLE'
+                           , control=control.ergm(MCMC.burnin=50000, MCMC.interval=5000))
 
 
 # Check the summary
