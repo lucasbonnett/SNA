@@ -1,6 +1,8 @@
 ###########################################################
 ################## Loading the Libraries ##################
 ###########################################################
+
+install.packages(c('readxl','statnet','coda','igraph','dplyr','intergraph','network','readr','ergm','data.table'))
 library(readxl)
 library(statnet)
 library(coda)
@@ -280,8 +282,9 @@ transitivity <- data.frame(name = V(airport_egde)$name,
 # with the ERGM model
 country_GDP_car <- merge(x=country_GDP_car, y=transitivity, by.x = 'name', by.y='name')
 
+
 ###############################################################
-################## ERGM - Without Attributes ##################
+#################### ERGM - Only Edge Term ####################
 ###############################################################
 
 detach("package:igraph")
@@ -292,6 +295,21 @@ set.seed(123)
 my_network <- network(flights_mat, vertex.attr=country_GDP_car, vertex.attrnames=
                         colnames(country_GDP_car), hyper=F, loops=F, multiple=F, 
                       bipartite=F, directed = F)
+
+#Benchmark with only the edge term
+ergmedge <- ergm(my_network ~ edges,
+                           control=control.ergm(MCMC.burnin=50000, MCMC.interval=5000))
+
+# Check the summary
+# AIC - 13140
+summary(ergmedge)
+
+
+###############################################################
+################## ERGM - Without Attributes ##################
+###############################################################
+
+
 
 # ERGM without attributes
 ergmstructuralonly <- ergm(my_network ~ edges + triangle + degree(1:10) + kstar(2:10), estimate='MPLE',
